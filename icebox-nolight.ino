@@ -34,7 +34,7 @@ byte addr[8];
 
 int temperatureall[24] = {
 //0 , 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23  
-  11,11,10,10,10,11,12,13,15,17,19,21,22,22,22,21,20,19,17,15,14,12,12,12};
+  11,11,10,10,10,11,12,13,15,17,19,21,22,22,22,21,20,19,17,16,15,14,13,12};
 
 
 void setup() 
@@ -53,8 +53,6 @@ void setup()
 
   Serial.println("RTC activated");
 
-  delay(500);
-
   // Check clock oscillation  
   if (RTC.haltRTC())
     Serial.println("Clock stopped!");
@@ -67,7 +65,7 @@ void setup()
   else
     Serial.println("Write protected.");
 
-  delay ( 2000 );
+  delay ( 500 );
 
   // Setup Time library  
   Serial.print("RTC Sync");
